@@ -1,5 +1,6 @@
 import org.pircbotx.Configuration;
 import org.pircbotx.PircBotX;
+import org.pircbotx.cap.EnableCapHandler;
 
 import javax.swing.*;
 import java.io.BufferedReader;
@@ -15,6 +16,8 @@ public class JdogBotMain
         Configuration.Builder builder = new Configuration.Builder();
         Configuration configuration;
 
+        builder.addCapHandler(new EnableCapHandler("twitch.tv/membership"));
+        builder.addCapHandler(new EnableCapHandler("twitch.tv/commands"));
         try
         {
             reader = new BufferedReader(new FileReader(FILENAME));

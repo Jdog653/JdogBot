@@ -24,7 +24,7 @@ import java.util.*;
 public class MessageListener extends ListenerAdapter
 {
     private final int RAID_ITERATIONS = 10, MAX_TIMERS = 5, HOURS_TO_MINUTES = 60, MINUTES_TO_SECONDS = 60, SECONDS_TO_MILLISECONDS = 1000;
-    private boolean capSent, giveawayActive;
+    private boolean giveawayActive;
     private final ArrayList<String> MODS = new ArrayList<>(Arrays.asList("jdog653","theofficialskozzy", "jdogbot", "mollyranchers"));
     private final String QUOTES_FILENAME = "Quote List.txt", GENERIC_RAID_MESSAGE = "Jdog Raid!";
     private Map<String, String> giveawayWinners;
@@ -46,7 +46,6 @@ public class MessageListener extends ListenerAdapter
         giveawayEntrants = new ArrayList<>();
         giveawayWinners = new HashMap<>();
         quotes = new ArrayList<>();
-        capSent = false;
         giveawayActive = false;
         money = new int[LMMoney.values().length];
         fileInit(QUOTES_FILENAME, quotes);
@@ -568,12 +567,7 @@ public class MessageListener extends ListenerAdapter
 
     public void onJoin(JoinEvent event)
     {
-        if(!capSent)
-        {
-            capSent = true;
-            event.getBot().sendCAP().request("twitch.tv/membership");
-            event.getBot().sendCAP().request("twitch.tv/commands");
-        }
+
     }
     public String serverCommandSet(MessageEvent event, ArrayList<String> params)
     {
