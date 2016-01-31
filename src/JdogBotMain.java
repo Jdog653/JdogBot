@@ -11,7 +11,7 @@ public class JdogBotMain
 {
     public static void main(String[] args) throws Exception
     {
-        final String FILENAME = "JdogBot.txt";
+        final String FILENAME = "Files\\JdogBot.txt";
         BufferedReader reader;
         Configuration.Builder builder = new Configuration.Builder();
         Configuration configuration;
