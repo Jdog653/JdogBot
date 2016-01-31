@@ -10,13 +10,14 @@ public class JdogBotMain
 {
     public static void main(String[] args) throws Exception
     {
+        final String FILENAME = "JdogBot.txt";
         BufferedReader reader;
         Configuration.Builder builder = new Configuration.Builder();
         Configuration configuration;
 
         try
         {
-            reader = new BufferedReader(new FileReader("JdogBot.txt"));
+            reader = new BufferedReader(new FileReader(FILENAME));
             String username, oauth, str;
 
             username = reader.readLine();
@@ -48,7 +49,7 @@ public class JdogBotMain
         }
         catch(FileNotFoundException e)
         {
-            JOptionPane.showMessageDialog(null, "File \"JdogBot.txt\" is not present in the root directory. Please ensure it is present");
+            JOptionPane.showMessageDialog(null, "File \"" + FILENAME + "\" is not present in the root directory. Please ensure it is present");
         }
     }
 }
