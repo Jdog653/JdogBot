@@ -24,7 +24,7 @@ public class MessageListener extends ListenerAdapter
     private final int RAID_ITERATIONS = 10, MAX_TIMERS = 5, HOURS_TO_MINUTES = 60, MINUTES_TO_SECONDS = 60, SECONDS_TO_MILLISECONDS = 1000;
     private boolean giveawayActive;
     private final ArrayList<String> MODS = new ArrayList<>(Arrays.asList("jdog653","theofficialskozzy", "jdogbot", "mollyranchers"));
-    private final String QUOTES_FILENAME = "Quote List.txt", GENERIC_RAID_MESSAGE = "Jdog Raid!";
+    private final String QUOTES_FILENAME = "Files\\Quote List.txt", GENERIC_RAID_MESSAGE = "Jdog Raid!";
     private Map<String, String> giveawayWinners;
     private ArrayList<String> quotes, giveawayEntrants;
     private int[] money;
