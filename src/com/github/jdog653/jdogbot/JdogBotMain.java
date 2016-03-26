@@ -1,3 +1,5 @@
+package com.github.jdog653.jdogbot;
+
 import org.pircbotx.Configuration;
 import org.pircbotx.PircBotX;
 import org.pircbotx.cap.EnableCapHandler;

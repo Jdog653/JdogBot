@@ -1,3 +1,5 @@
+package com.github.jdog653.jdogbot;
+
 /**
  * Created by Jordan on 8/6/2015.
  */
