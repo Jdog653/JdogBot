@@ -13,7 +13,8 @@ public class JdogBotMain
 {
     public static void main(String[] args) throws Exception
     {
-        final String FILENAME = "Files\\JdogBot.txt";
+        //final String FILENAME = "Files\\JdogBot.txt";
+        final String FILENAME = "Files/JdogBot.txt";
         BufferedReader reader;
         Configuration.Builder builder = new Configuration.Builder();
         Configuration configuration;
@@ -44,7 +45,8 @@ public class JdogBotMain
                 str = reader.readLine();
             }
 
-            builder.addListener(new MessageListener());
+            //builder.addListener(new MessageListener());
+            builder.addListener(new JdogBotMessageListener());
             configuration = builder.buildConfiguration();
 
             //Create our bot with the configuration
